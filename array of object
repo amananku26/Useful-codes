@@ -1,0 +1,21 @@
+const arr = [
+  { id: "aman", name: "test1" },
+  { id: "aman", name: "test2" },
+  { id: "anku", name: "test3" },
+  { id: "anku", name: "test4" },
+  { id: "amit", name: "test5" },
+  { id: "amit", name: "test6" },
+  { id: "ashish", name: "test7" },
+  { id: "ashish", name: "test8" }
+];
+
+const filteredArr = arr.reduce((acc, current) => {
+  const x = acc.find(item => item.id === current.id);
+  if (!x) {
+    return acc.concat([current]);
+  } else {
+    return acc;
+  }
+}, []);
+
+console.log(filteredArr)
