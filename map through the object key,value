@@ -1,3 +1,17 @@
+first way =====>    
 {Object.keys(yourObject).map(function(key) {
   return <div>Key: {key}, Value: {yourObject[key]}</div>;
 })}
+
+
+second way (recomended) ======> 
+ {
+        Object.entries(joblist).map(([key, value]) => (
+            <div id={key}>
+                Date: {key}
+                {
+                    value.map(el => <div key={el.id}> {el.created_time} </div> )
+                }
+            </div>
+        ))
+    }
