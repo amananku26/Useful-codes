@@ -1,0 +1,1 @@
+Just use substring: "apple".substring(3); will return le
